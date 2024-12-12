@@ -12,5 +12,11 @@
  * @returns {Object}
  */
 module.exports.partialSum = function partialSum(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let result = [];
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+    result.push(total);
+  }
+  return result;
 };

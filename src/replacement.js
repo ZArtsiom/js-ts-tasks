@@ -8,5 +8,17 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.map(num => {
+    // Get the absolute value of the number to handle negative numbers
+    const absNum = Math.abs(num);
+
+    // Convert the absolute number to a string to count digits
+    const numDigits = absNum.toString().length;
+
+    // Replace based on the number of digits
+    if (numDigits === 1) return 1;
+    if (numDigits === 2) return 2;
+    if (numDigits === 3) return 3;
+    return 4; // For numbers with more than 3 digits
+  });
 };

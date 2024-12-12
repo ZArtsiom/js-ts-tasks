@@ -4,5 +4,8 @@
  * @returns {number}
  */
 module.exports.diffElems = function diffElems(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  const uniqueElements = new Set(arr);
+
+  // The size of the Set represents the number of distinct elements
+  return uniqueElements.size;
 };
