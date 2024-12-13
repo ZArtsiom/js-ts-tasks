@@ -14,5 +14,24 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function censor(text) {
+    // Sort forbidden words by length to handle longer phrases first
+    forbidden.sort((a, b) => b.length - a.length);
+
+    // Replace each forbidden word
+    forbidden.forEach(word => {
+      // Create a regex to match the word, allowing for spaces or overlaps
+      const regex = new RegExp(
+        word
+          .split('')
+          .map(char => (char === ' ' ? '\\s+' : char.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))
+          .join(''),
+        'gi'
+      );
+
+      text = text.replace(regex, match => '*'.repeat(match.length));
+    });
+
+    return text;
+  };
 };
