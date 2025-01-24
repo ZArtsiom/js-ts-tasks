@@ -13,5 +13,17 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function (input) {
+    // Convert all uppercase letters to lowercase
+    let cleanedStr = input.toLowerCase();
+
+    // Remove all non-alphanumeric characters
+    cleanedStr = cleanedStr.replace(/[^A-Za-z0-9]/g, '');
+    // Debug: Print cleaned string
+    let string = {
+      str: cleanedStr,
+    };
+    // Call isPalindrome function from TestUtils object
+    return TestUtils.isPalindrome.call(string);
+  }; // remove this line and create your solution
 };

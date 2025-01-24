@@ -1,5 +1,6 @@
 module.exports.TestUtils = {
   isPalindrome: function () {
+    console.log('this:', this);
     if (typeof this.str !== 'string') {
       throw new Error(`Cannot find variable "str" in a provided context ${JSON.stringify(this)}`);
     }

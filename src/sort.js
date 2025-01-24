@@ -9,5 +9,17 @@
  * @returns {function}
  */
 module.exports.sort = function sort(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function (...arguments) {
+    for (let i = 0; i <= arguments.length - 1; i++) {
+      for (let j = 0; j <= arguments.length - i - 2; j++) {
+        if (TestUtils.sortComparator(arguments[j], arguments[j + 1]) > 0) {
+          bucket = arguments[j];
+          arguments[j] = arguments[j + 1];
+          arguments[j + 1] = bucket;
+        }
+      }
+    }
+    console.log(arguments);
+    return arguments;
+  };
 };
