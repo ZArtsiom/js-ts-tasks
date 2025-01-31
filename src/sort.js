@@ -19,7 +19,6 @@ module.exports.sort = function sort(TestUtils) {
         }
       }
     }
-    console.log(arguments);
     return arguments;
   };
 };
