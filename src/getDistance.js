@@ -7,5 +7,10 @@
  * @returns {number}
  */
 module.exports.getDistance = function getDistance(firstPoint, secondPoint) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  const deltaX = secondPoint.X - firstPoint.X;
+  const deltaY = secondPoint.Y - firstPoint.Y;
+
+  // Calculate the distance using the distance formula and round to 2 decimal places
+  const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+  return parseFloat(distance.toFixed(2));
 };
