@@ -5,5 +5,11 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+  if (symbolsCount <= str.length) {
+    str1 = str.slice(str.length - symbolsCount, str.length);
+    str2 = str1 + str + str1;
+  } else {
+    str2 = str;
+  }
+  return str2;
 };
