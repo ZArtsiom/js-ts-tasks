@@ -3,3 +3,82 @@
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
 }
+.iphone-frame {
+  width: 375px;
+  height: 667px;
+  border: 16px solid #ccc;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: white;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.user-stats p {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.action-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  background-color: #3897f0;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.story-highlights {
+  display: flex;
+  margin: 10px 0;
+}
+
+.story {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
